@@ -1,0 +1,437 @@
+/* --- CONFIGURAÇÕES GLOBAIS (Mantive as suas) --- */
+:root {
+    --cor-primaria: #737373;
+    --cor-secundaria: #d9d9d9;
+    --cor-fundo: #efefef;
+    --cor-destaque: #545454;
+    --cor-textos-escuro: #333333; /* Suavizei o preto absoluto */
+    --cor-texto-claro: white;
+    --fonte-principal: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cor-textos-escuro);
+    line-height: 1.6; /* Melhora a leitura dos textos */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Corta qualquer coisa que tente vazar para a direita */
+    position: relative; /* Ajuda a manter a estrutura */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%; /* Garante que nenhuma imagem estoure a tela */
+    display: block;
+    border-radius: 8px; /* Borda levemente arredondada nas imagens */
+}
+
+/* --- HEADER & NAV --- */
+header {
+    background-color: var(--cor-primaria); 
+    color: var(--cor-texto-claro); 
+    padding: 15px 20px;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+header nav li a {
+    display: block;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+header nav li a:hover {
+    background-color: var(--cor-destaque); 
+    color: var(--cor-texto-claro);
+}
+
+/* --- SEÇÃO HERO (HOME) --- */
+.secao-hero {
+    background-color: var(--cor-fundo);
+}
+
+.conteudo-hero {
+    display: flex;          
+    flex-direction: row;     
+    justify-content: space-between; 
+    align-items: center;     
+    padding: 80px 50px;           
+    max-width: 1200px;       
+    margin: 0 auto;         
+}
+
+.texto-hero {
+    width: 50%; 
+    padding-right: 30px;
+}
+
+.texto-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+}
+
+.img-hero {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Botão Padrão */
+.botao-curriculo a, .botao-cta {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 0 #555; /* Efeito 3D simples */
+}
+
+.botao-curriculo a:hover, .botao-cta:hover {
+    transform: translateY(-2px); /* Sobem um pouquinho ao passar o mouse */
+    background-color: var(--cor-destaque);
+}
+
+/* --- FAIXA CTA (CHAMADA PARA AÇÃO) --- */
+.faixa {
+    background-color: var(--cor-secundaria);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.faixa h3 {
+    color: var(--cor-destaque);
+    font-style: italic;
+}
+
+/* --- SEÇÃO HABILIDADES --- */
+.secao-habilidades {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.secao-habilidades > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--cor-destaque);
+}
+
+/* Container para alinhar Soft e Hard skills lado a lado */
+.secao-habilidades .Soft.Skills, 
+.secao-habilidades .Hard.Skills {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    background: white;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.secao-habilidades ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* --- SEÇÃO EXPERIÊNCIA --- */
+.secao-experiencia {
+    padding: 60px 20px;
+    background-color: white; /* Diferenciar o fundo */
+}
+
+.secao-experiencia h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--cor-destaque);
+}
+
+.experiencia-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    gap: 30px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.imagem-experiencia img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 50%; /* Deixa a imagem redonda */
+}
+
+.texto-experiencia {
+    flex: 1;
+}
+
+/* --- SEÇÃO PROJETOS --- */
+.secao-projetos {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secao-projetos > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--cor-destaque);
+}
+
+/* Usando GRID para os projetos (fica responsivo automático) */
+.projetos-container {
+    display: grid;
+    /* Cria colunas que se adaptam: minimo 300px, maximo o que der */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+.projeto-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: block; /* Para o link cobrir todo o card */
+    height: 100%;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-info {
+    padding: 20px;
+}
+
+.projeto-info h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+}
+
+.projeto-info h3 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* --- SOBRE MIM --- */
+.secao-sobre-mim {
+    padding: 60px 20px;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.conteudo-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 30px auto 0;
+    gap: 40px;
+    text-align: left;
+}
+
+.img-sobre img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0 var(--cor-primaria); /* Efeito de moldura deslocada */
+}
+
+/* --- CONTATO & FOOTER --- */
+.secao-contato {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.contato-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.contato-info img, .redes-sociais img {
+    width: 30px;
+    height: 30px;
+}
+
+.redes-sociais {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+footer img {
+    filter: invert(1); /* Inverte a cor dos ícones para ficarem brancos */
+}
+
+/* --- RESPONSIVIDADE (CELULARES) --- */
+@media (max-width: 768px) {
+    /* Ajusta o menu para coluna */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hero vira coluna */
+    .conteudo-hero, .faixa, .conteudo-sobre, .experiencia-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-hero, .img-hero, .secao-habilidades .Soft.Skills, .secao-habilidades .Hard.Skills {
+        width: 100%;
+        padding: 0;
+    }
+
+    .texto-hero {
+        margin-bottom: 30px;
+    }
+    
+    .experiencia-item {
+        flex-direction: column;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header {
+        padding: 10px 0; /* Remove padding lateral para aproveitar a tela toda */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Mantém em linha, NÃO em coluna */
+        flex-wrap: nowrap;   /* PROIBIDO quebrar linha */
+        justify-content: flex-start; /* Começa da esquerda */
+        overflow-x: auto;    /* Habilita rolagem lateral se estourar */
+        padding: 10px;       /* Espaço interno */
+        
+        /* Esconde a barra de rolagem feia (opcional) */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    /* Esconde barra de rolagem no Chrome/Safari */
+    header nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    header nav li a {
+        white-space: nowrap; /* Impede que o texto do link quebre */
+        font-size: 0.85rem;  /* Diminui um pouco a fonte */
+        padding: 8px 12px;   /* Botões menores */
+    }
+
+    .texto-hero h1 {
+        font-size: 2rem; /* Estava 3rem (muito grande), diminuímos para 2rem */
+        word-wrap: break-word; /* Se a palavra for maior que a tela, ela quebra para a linha de baixo */
+        line-height: 1.2; /* Junta um pouco mais as linhas */
+    }
+}
+
+@media (max-width: 350px) {
+    .texto-hero h1 {
+        font-size: 1.5rem; /* Fonte ainda menor para telas minúsculas */
+    }
+    
+    header nav li a {
+        font-size: 0.75rem; /* Diminui a letra do menu */
+        padding: 5px 8px;
+    }
+}
+
+/* Adicione isso ao seu CSS */
+header nav li a img {
+    height: 1.2rem; /* Define a altura parecida com o tamanho da fonte */
+    width: auto;    /* Mantém a proporção da imagem para não esticar */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    display: inline-block; /* Garante que o comportamento seja de linha */
+}
+
+/* Ajuste fino para remover padding excessivo apenas no logo se necessário */
+header nav li:first-child a {
+    padding-top: 5px; /* Ajuste visual leve */
+}
+
+.secao-contato > img {
+    width: 50px;       /* Tamanho pequenininho (ajuste se quiser maior/menor) */
+    height: auto;
+    margin: 0 auto 20px auto; /* Centraliza (auto nas laterais) e dá espaço embaixo */
+    display: block;    /* Necessário para o margin auto funcionar */
+}
