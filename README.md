@@ -32,6 +32,6 @@ Este projeto foi otimizado para:
 3. **Smartphones**: Menu superior com rolagem horizontal e textos auto-ajustáveis para telas a partir de 320px.
 
 ### O projeto está hospedado no GitHub Pages e pode ser acessado através do link abaixo:
-[👉 Clique aqui para acessar o site](https://SEU-USUARIO.github.io/modelo-portfolio/)
+[👉 Clique aqui para acessar o site](https://mayaraalicia.github.io/modelo-portfolio/)
 ---
 *Desenvolvido como projeto de estudo e prática de Front-end.*
